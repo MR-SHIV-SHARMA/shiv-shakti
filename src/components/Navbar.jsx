@@ -35,11 +35,14 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-lg">
           {menuItems.map((item) => {
-            const isActive = pathname === `/${item.toLowerCase()}`;
+            const itemPath =
+              item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
+            const isActive = pathname === itemPath;
+
             return (
               <li key={item}>
                 <Link
-                  to={`/${item.toLowerCase()}`}
+                  to={itemPath}
                   className={`px-3 py-2 rounded-lg transition ${
                     isActive
                       ? "bg-white text-blue-600 shadow-md"
@@ -64,11 +67,14 @@ export default function Navbar() {
             className="md:hidden flex flex-col items-center bg-blue-600 py-4 space-y-3 shadow-lg rounded-b-lg"
           >
             {menuItems.map((item) => {
-              const isActive = pathname === `/${item.toLowerCase()}`;
+              const itemPath =
+                item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
+              const isActive = pathname === itemPath;
+
               return (
                 <li key={item} className="w-full text-center">
                   <Link
-                    to={`/${item.toLowerCase()}`}
+                    to={itemPath}
                     className={`block px-6 py-3 rounded-lg text-lg transition ${
                       isActive
                         ? "bg-white text-blue-600 shadow-md"
