@@ -5,12 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // Get current page route
-  const pathname = location.pathname; // Extract string path
+  const location = useLocation();
+  const pathname = location.pathname;
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Close menu on route change
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
@@ -18,18 +17,24 @@ export default function Navbar() {
   const menuItems = ["Home", "Services", "Book", "Reviews", "Contact"];
 
   return (
-    <nav className="bg-gradient-to-r from-blue-700 to-blue-500 text-white shadow-lg">
+    <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-md sticky top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <h1 className="text-2xl font-bold tracking-wide">AC Repair Pro</h1>
+        <h1 className="text-2xl font-bold tracking-wide text-gray-200">
+          AC Repair Pro
+        </h1>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-white"
+          className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? (
+            <X size={28} className="text-gray-300" />
+          ) : (
+            <Menu size={28} className="text-gray-300" />
+          )}
         </button>
 
         {/* Desktop Menu */}
@@ -43,10 +48,10 @@ export default function Navbar() {
               <li key={item}>
                 <Link
                   to={itemPath}
-                  className={`px-3 py-2 rounded-lg transition ${
+                  className={`px-3 py-2 rounded-lg transition duration-300 ease-in-out font-medium ${
                     isActive
-                      ? "bg-white text-blue-600 shadow-md"
-                      : "hover:text-gray-200"
+                      ? "bg-gray-700 text-white shadow-lg"
+                      : "text-gray-300 hover:text-white hover:bg-gray-700"
                   }`}
                 >
                   {item}
@@ -64,7 +69,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden flex flex-col items-center bg-blue-600 py-4 space-y-3 shadow-lg rounded-b-lg"
+            className="md:hidden flex flex-col items-center bg-gray-800 py-4 space-y-3 shadow-lg rounded-b-lg"
           >
             {menuItems.map((item) => {
               const itemPath =
@@ -75,10 +80,10 @@ export default function Navbar() {
                 <li key={item} className="w-full text-center">
                   <Link
                     to={itemPath}
-                    className={`block px-6 py-3 rounded-lg text-lg transition ${
+                    className={`block px-6 py-3 rounded-lg text-lg transition duration-300 ease-in-out ${
                       isActive
-                        ? "bg-white text-blue-600 shadow-md"
-                        : "hover:text-gray-300"
+                        ? "bg-gray-700 text-white shadow-md"
+                        : "text-gray-300 hover:text-white hover:bg-gray-700"
                     }`}
                   >
                     {item}

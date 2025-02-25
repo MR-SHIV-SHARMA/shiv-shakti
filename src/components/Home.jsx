@@ -111,19 +111,45 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative text-center bg-gradient-to-br from-blue-600 to-blue-700 text-white py-24 md:py-32">
+      <section className="relative text-center bg-gradient-to-br from-blue-50 to-indigo-50 py-12 md:py-16 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 z-0 opacity-10">
+          <div className="absolute w-96 h-96 -top-48 -left-48 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+          <div className="absolute w-96 h-96 -top-48 -right-48 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+          <div className="absolute w-96 h-96 -bottom-48 left-1/3 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+        </div>
+
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-8 leading-[1.2]"
+            className="text-5xl md:text-7xl xl:text-8xl font-bold mb-8 leading-[1.1]"
           >
-            Expert Appliance Repair <br className="hidden md:block" />
-            <span className="bg-white text-blue-600 px-4 py-1 rounded-xl inline-block mt-6">
-              Services
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
+              Expert Appliance
+            </span>
+            <br className="hidden md:block" />
+            <span className="bg-gradient-to-r from-indigo-600 to-blue-700 bg-clip-text text-transparent">
+              Repair Services
             </span>
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto"
+          >
+            Fast, reliable, and professional appliance repair services with
+            <span className="font-semibold text-blue-600">
+              {" "}
+              90-day warranty
+            </span>
+            and{" "}
+            <span className="font-semibold text-indigo-600">24/7 support</span>
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -134,24 +160,60 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="/booking"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl hover:shadow-3xl flex items-center gap-3"
+              className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white px-8 py-5 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl flex items-center gap-3 transition-all duration-300"
             >
-              <FaCheckCircle className="w-6 h-6" />
+              <FaCheckCircle className="w-7 h-7 text-white/90" />
               Schedule Same-Day Service
             </motion.a>
-            <a
-              href="tel:+911234567890"
-              className="flex items-center gap-3 text-lg font-medium hover:underline"
-            >
-              <FaPhoneAlt className="w-6 h-6" />
-              24/7 Emergency Service
-            </a>
+
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+              <a
+                href="tel:+911234567890"
+                className="relative flex items-center gap-3 text-lg font-semibold text-gray-700 hover:text-indigo-700 px-6 py-3 transition-colors"
+              >
+                <div className="p-3 bg-indigo-100 rounded-xl">
+                  <FaPhoneAlt className="w-6 h-6 text-indigo-600" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm text-gray-500">Emergency Call</p>
+                  <p className="text-xl font-bold">+91 12345 67890</p>
+                </div>
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Trust badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="mt-16 flex flex-col items-center gap-4 text-gray-600"
+          >
+            <div className="flex -space-x-4">
+              {[...Array(5)].map((_, i) => (
+                <img
+                  key={i}
+                  src="/vite.svg"
+                  className="w-12 h-12 rounded-full border-4 border-white"
+                  alt={`Customer ${i + 1}`}
+                />
+              ))}
+            </div>
+            <p className="flex items-center gap-2">
+              <FaStar className="w-5 h-5 text-yellow-400" />
+              <span className="font-semibold">4.9/5</span>
+              (2,500+ Satisfied Customers)
+            </p>
           </motion.div>
         </div>
+
+        {/* Animated decorative elements */}
+        {/* <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-20" /> */}
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             title="Our Services"
