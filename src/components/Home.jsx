@@ -45,7 +45,7 @@ const services = [
   },
   {
     title: "Washing Machine",
-    icon: <GiWashingMachine className="w-12 h-12 mb-4 text-blue-600" />,
+    icon: <GiWashingMachine className="w-12 h-12 mb-4 text-black" />,
     description: "Motor repair & leakage solutions",
     price: "899",
   },
@@ -89,21 +89,11 @@ const ServiceCard = ({ service, index }) => (
     whileHover={{ scale: 1.05 }}
     className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
   >
-    <div className="flex items-center justify-center text-blue-600 mb-6">
+    <div className="flex items-center justify-center text-black mb-6">
       {service.icon}
     </div>
     <h3 className="text-2xl font-bold mb-4 text-gray-800">{service.title}</h3>
-    <p className="text-gray-600 mb-6">{service.description}</p>
-    <div className="flex justify-between items-center">
-      <span className="text-2xl font-bold text-blue-600">₹{service.price}</span>
-      <motion.a
-        whileHover={{ scale: 1.1 }}
-        href="/booking"
-        className="bg-blue-100 text-blue-600 px-6 py-2 rounded-lg font-semibold"
-      >
-        Book Now
-      </motion.a>
-    </div>
+    <div className="flex justify-between items-center"></div>
   </motion.div>
 );
 
@@ -111,105 +101,118 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative text-center bg-gradient-to-br from-blue-50 to-indigo-50 py-12 md:py-16 overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 z-0 opacity-10">
-          <div className="absolute w-96 h-96 -top-48 -left-48 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-          <div className="absolute w-96 h-96 -top-48 -right-48 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-          <div className="absolute w-96 h-96 -bottom-48 left-1/3 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto px-4 relative z-10">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl xl:text-8xl font-bold mb-8 leading-[1.1]"
-          >
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
-              Expert Appliance
-            </span>
-            <br className="hidden md:block" />
-            <span className="bg-gradient-to-r from-indigo-600 to-blue-700 bg-clip-text text-transparent">
-              Repair Services
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto"
-          >
-            Fast, reliable, and professional appliance repair services with
-            <span className="font-semibold text-blue-600">
-              {" "}
-              90-day warranty
-            </span>
-            and{" "}
-            <span className="font-semibold text-indigo-600">24/7 support</span>
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="flex flex-col md:flex-row justify-center items-center gap-6"
-          >
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="/booking"
-              className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white px-8 py-5 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl flex items-center gap-3 transition-all duration-300"
-            >
-              <FaCheckCircle className="w-7 h-7 text-white/90" />
-              Schedule Same-Day Service
-            </motion.a>
-
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
-              <a
-                href="tel:+911234567890"
-                className="relative flex items-center gap-3 text-lg font-semibold text-gray-700 hover:text-indigo-700 px-6 py-3 transition-colors"
-              >
-                <div className="p-3 bg-indigo-100 rounded-xl">
-                  <FaPhoneAlt className="w-6 h-6 text-indigo-600" />
-                </div>
-                <div className="text-left">
-                  <p className="text-sm text-gray-500">Emergency Call</p>
-                  <p className="text-xl font-bold">+91 12345 67890</p>
-                </div>
-              </a>
-            </div>
-          </motion.div>
-
-          {/* Trust badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="mt-16 flex flex-col items-center gap-4 text-gray-600"
-          >
-            <div className="flex -space-x-4">
-              {[...Array(5)].map((_, i) => (
-                <img
-                  key={i}
-                  src="/vite.svg"
-                  className="w-12 h-12 rounded-full border-4 border-white"
-                  alt={`Customer ${i + 1}`}
-                />
-              ))}
-            </div>
-            <p className="flex items-center gap-2">
-              <FaStar className="w-5 h-5 text-yellow-400" />
-              <span className="font-semibold">4.9/5</span>
-              (2,500+ Satisfied Customers)
+      <section className="relative bg-black text-yellow-500 w-full h-auto pt-8">
+        {/* Top Section - Logo and Business Name */}
+        <div className="sm:absolute flex justify-between sm:justify-start sm:w-1/2 items-center sm:items-start px-4 bg-black">
+          <div className="w-1/2 sm:w-auto flex justify-center border-yellow-500 p-4 mr-4 rounded-lg border-4">
+            <img
+              src="/vite.svg"
+              alt="Shiv Shakti Home Appliance Services"
+              className="w-24 sm:w-32 h-24 sm:h-32"
+            />
+          </div>
+          <div className="w-1/2 sm:w-auto text-left">
+            <h1 className="text-2xl font-bold">
+              Shiv Shakti Home Appliance Service's
+            </h1>
+            <p className="text-lg font-semibold mt-2 hidden sm:block ">
+              Con. No. 6375477987
             </p>
-          </motion.div>
+          </div>
+        </div>
+        <p className="text-lg font-semibold mt-2 px-4 sm:hidden">
+          Con. No. 6375477987
+        </p>
+
+        {/* Middle Section - Appliance Images in Right-Aligned Pyramid Shape */}
+        <div className="flex justify-end items-end sm:w-[75%] right-0 mt-6 bg-yellow-500 p-6 pb-16 sm:pb-32 rounded-tl-full overflow-hidden relative ml-auto">
+          <div
+            className="grid gap-4 mt-10"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gridTemplateRows: "repeat(3, auto)",
+              justifyItems: "end", // Align all items to the right
+              alignItems: "end",
+              gridTemplateAreas: `
+        ". . img1"
+        ". img2 img3"
+        "img4 img5 img6"
+      `,
+            }}
+          >
+            <img
+              src="/vite.svg"
+              alt="Appliance 1"
+              className="w-24 h-24 rounded-lg"
+              style={{ gridArea: "img1" }}
+            />
+            <img
+              src="/vite.svg"
+              alt="Appliance 2"
+              className="w-24 h-24 rounded-lg"
+              style={{ gridArea: "img2" }}
+            />
+            <img
+              src="/vite.svg"
+              alt="Appliance 3"
+              className="w-24 h-24 rounded-lg"
+              style={{ gridArea: "img3" }}
+            />
+            <img
+              src="/vite.svg"
+              alt="Appliance 4"
+              className="w-24 h-24 rounded-lg"
+              style={{ gridArea: "img4" }}
+            />
+            <img
+              src="/vite.svg"
+              alt="Appliance 5"
+              className="w-24 h-24 rounded-lg"
+              style={{ gridArea: "img5" }}
+            />
+            <img
+              src="/vite.svg"
+              alt="Appliance 6"
+              className="w-24 h-24 rounded-lg"
+              style={{ gridArea: "img6" }}
+            />
+          </div>
         </div>
 
-        {/* Animated decorative elements */}
-        {/* <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-20" /> */}
+        {/* Horizontal Line */}
+        <div className="w-full mt-1"></div>
+
+        {/* Bottom Section - Services */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center pt-6 pb-6 px-4 bg-yellow-500">
+          <div className="relative border border-black p-2">
+            <span className="absolute top-0 left-12 right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
+            <img
+              src="/vite.svg"
+              alt="Air Conditioner"
+              className="w-32 mx-auto mt-4"
+            />
+            <p className="mt-2 font-semibold">Air Conditioner</p>
+          </div>
+          <div className="relative border border-black p-2">
+            <span className="absolute top-0 left-12 right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
+            <img
+              src="/vite.svg"
+              alt="Washing Machine"
+              className="w-32 mx-auto mt-4"
+            />
+            <p className="mt-2 font-semibold">Washing Machine</p>
+          </div>
+          <div className="relative border border-black p-2">
+            <span className="absolute top-0 left-12 right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
+            <img
+              src="/vite.svg"
+              alt="Refrigerator"
+              className="w-32 mx-auto mt-4"
+            />
+            <p className="mt-2 font-semibold">Refrigerator</p>
+          </div>
+        </div>
       </section>
 
       {/* Services Section */}
