@@ -3,6 +3,10 @@ import { TbAirConditioning } from "react-icons/tb";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
 import { GiWashingMachine } from "react-icons/gi";
 import { PiTelevisionBold, PiBathtub } from "react-icons/pi";
+import { FaFaucet } from "react-icons/fa";
+import { TbAirConditioningDisabled } from "react-icons/tb";
+import { MdSmokeFree } from "react-icons/md";
+import { MdKitchen } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -49,7 +53,36 @@ export default function Home() {
       ),
       name: "Geyser (Water Heater)",
     },
+    {
+      id: "ro",
+      icon: (
+        <FaFaucet className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "RO Water Purifier",
+    },
+    {
+      id: "window-ac",
+      icon: (
+        <TbAirConditioningDisabled className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "Window AC",
+    },
+    {
+      id: "modular-kitchen",
+      icon: (
+        <MdKitchen className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "Modular Kitchen",
+    },
+    {
+      id: "chimney",
+      icon: (
+        <MdSmokeFree className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "Chimney",
+    },
   ];
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}

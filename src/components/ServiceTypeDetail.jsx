@@ -57,9 +57,9 @@ const ServiceTypeDetail = () => {
       </ul>
 
       {/* Book Now Button */}
-      <button className="mt-6 bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition duration-300 shadow-md text-lg md:text-xl">
+      {/* <button className="mt-6 bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition duration-300 shadow-md text-lg md:text-xl">
         Book Now
-      </button>
+      </button> */}
     </div>
   );
 };
