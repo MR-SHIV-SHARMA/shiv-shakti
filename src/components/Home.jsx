@@ -3,21 +3,60 @@ import { TbAirConditioning } from "react-icons/tb";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
 import { GiWashingMachine } from "react-icons/gi";
 import { PiTelevisionBold, PiBathtub } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  // const devices = [
-  //   { icon: <TbAirConditioning />, label: "Air Conditioner" },
-  //   { icon: <GiWashingMachine />, label: "Washing Machine" },
-  //   { icon: <CgSmartHomeRefrigerator />, label: "Refrigerator" },
-  //   { icon: <FaTv />, label: "TV & Appliances" },
-  // ];
+  const services = [
+    {
+      id: "air-conditioner",
+      icon: (
+        <TbAirConditioning className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "Air Conditioner",
+    },
+    {
+      id: "washing-machine",
+      icon: (
+        <GiWashingMachine className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "Washing Machine",
+    },
+    {
+      id: "refrigerator",
+      icon: (
+        <CgSmartHomeRefrigerator className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "Refrigerator",
+    },
+    {
+      id: "tv",
+      icon: (
+        <FaTv className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "TV & Appliances",
+    },
+    {
+      id: "microwave-oven",
+      icon: (
+        <PiTelevisionBold className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "Microwave Oven",
+    },
+    {
+      id: "geyser",
+      icon: (
+        <PiBathtub className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "Geyser (Water Heater)",
+    },
+  ];
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative bg-black text-yellow-500 w-full h-auto pt-8">
         {/* Top Section - Logo and Business Name */}
         <div className="sm:absolute flex justify-between sm:justify-start sm:w-1/2 items-center sm:items-start px-4 bg-black">
-          <div className="w-1/2 sm:w-auto flex justify-center border-yellow-500 p-4 mr-4 rounded-lg border-4">
+          <div className="w-1/2 sm:w-auto flex justify-center px-4 mr-4">
             <img
               src="/logo.jpeg"
               alt="Shiv Shakti Home Appliance Services"
@@ -98,38 +137,17 @@ export default function Home() {
 
         {/* Bottom Section - Services */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center pt-6 pb-6 px-4 bg-yellow-500">
-          <div className="relative border-2 border-black p-2">
-            <span className="absolute top-0 left-4 sm:left-12 right-4 sm:right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
-            <TbAirConditioning className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
-            <p className="mt-2 font-semibold text-black">Air Conditioner</p>
-          </div>
-          <div className="relative border-2 border-black p-2">
-            <span className="absolute top-0 left-4 sm:left-12 right-4 sm:right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
-            <GiWashingMachine className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
-            <p className="mt-2 font-semibold text-black">Washing Machine</p>
-          </div>
-          <div className="relative border-2 border-black p-2">
-            <span className="absolute top-0 left-4 sm:left-12 right-4 sm:right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
-            <CgSmartHomeRefrigerator className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
-            <p className="mt-2 font-semibold text-black">Refrigerator</p>
-          </div>
-          <div className="relative border-2 border-black p-2">
-            <span className="absolute top-0 left-4 sm:left-12 right-4 sm:right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
-            <FaTv className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
-            <p className="mt-2 font-semibold text-black">TV & Appliances</p>
-          </div>
-          <div className="relative border-2 border-black p-2">
-            <span className="absolute top-0 left-4 sm:left-12 right-4 sm:right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
-            <PiTelevisionBold className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
-            <p className="mt-2 font-semibold text-black">Microwave Oven</p>
-          </div>
-          <div className="relative border-2 border-black p-2">
-            <span className="absolute top-0 left-4 sm:left-12 right-4 sm:right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
-            <PiBathtub className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
-            <p className="mt-2 font-semibold text-black">
-              Geyser (Water Heater)
-            </p>
-          </div>
+          {services.map((service) => (
+            <Link
+              key={service.id}
+              to={`/service/${service.id}`}
+              className="relative border-2 border-black p-2 block"
+            >
+              <span className="absolute top-0 left-4 sm:left-12 right-4 sm:right-12 h-[6px] bg-black rounded-br-2xl rounded-bl-2xl" />
+              {service.icon}
+              <p className="mt-2 font-semibold text-black">{service.name}</p>
+            </Link>
+          ))}
         </div>
       </section>
     </div>
