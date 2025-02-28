@@ -77,62 +77,27 @@ export default function Home() {
         </p>
 
         {/* Middle Section - Appliance Images in Right-Aligned Pyramid Shape */}
-        <div className="flex justify-end items-end sm:w-[75%] right-0 mt-6 bg-yellow-500 p-6 pb-16 sm:pb-32 rounded-tl-full overflow-hidden relative ml-auto">
-          <div
-            className="grid gap-4 mt-10"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gridTemplateRows: "repeat(3, auto)",
-              justifyItems: "end", // Align all items to the right
-              alignItems: "end",
-              gridTemplateAreas: `
-        ". . img1"
-        ". img2 img3"
-        "img4 img5 img6"
-      `,
-            }}
-          >
+        <div className="flex justify-end items-end w-[100%] sm:w-[75%] right-0 mt-6 bg-yellow-500 rounded-tl-full overflow-hidden relative ml-auto">
+          <div className="w-full h-full bg-yellow-500">
+            {/* Appliance 1 - Mobile View */}
             <img
-              src="/vite.svg"
+              src="/public/WhatsApp Image 2025-02-28 at 11.35.00.jpeg"
               alt="Appliance 1"
-              className="w-24 h-24 rounded-lg"
-              style={{ gridArea: "img1" }}
+              className="w-full h-full object-cover sm:hidden"
             />
+
+            {/* Appliance 2 - Desktop View */}
             <img
-              src="/vite.svg"
+              src="/public/WhatsApp Image 2025-02-28 at 11.43.42.jpeg"
               alt="Appliance 2"
-              className="w-24 h-24 rounded-lg"
-              style={{ gridArea: "img2" }}
-            />
-            <img
-              src="/vite.svg"
-              alt="Appliance 3"
-              className="w-24 h-24 rounded-lg"
-              style={{ gridArea: "img3" }}
-            />
-            <img
-              src="/vite.svg"
-              alt="Appliance 4"
-              className="w-24 h-24 rounded-lg"
-              style={{ gridArea: "img4" }}
-            />
-            <img
-              src="/vite.svg"
-              alt="Appliance 5"
-              className="w-24 h-24 rounded-lg"
-              style={{ gridArea: "img5" }}
-            />
-            <img
-              src="/vite.svg"
-              alt="Appliance 6"
-              className="w-24 h-24 rounded-lg"
-              style={{ gridArea: "img6" }}
+              className="w-full h-full object-cover hidden sm:block"
             />
           </div>
         </div>
 
         {/* Horizontal Line */}
+        <div className="w-full pt-5 bg-yellow-500"></div>
+
         <div className="w-full mt-1"></div>
 
         {/* Bottom Section - Services */}
