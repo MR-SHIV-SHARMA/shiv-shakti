@@ -329,28 +329,47 @@ const ServiceDetail = () => {
   const service = serviceDetails[serviceId];
 
   if (!service) {
-    return <h2 className="text-center text-red-500">Service not found</h2>;
+    return (
+      <h2 className="text-center text-red-500 text-xl mt-10">
+        Service not found
+      </h2>
+    );
   }
 
   return (
-    <div className="p-6 text-center">
+    <div className="p-6 md:p-10 text-center max-w-5xl mx-auto">
+      {/* Service Icon */}
       <div className="flex justify-center">{service.icon}</div>
-      <h1 className="text-3xl font-bold mt-4">{service.title}</h1>
-      <p className="mt-4 text-lg">{service.description}</p>
 
-      <div className="mt-6">
-        <h2 className="text-2xl font-semibold">Pricing & Details</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+      {/* Title & Description */}
+      <h1 className="text-4xl font-extrabold mt-4 text-gray-800">
+        {service.title}
+      </h1>
+      <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+        {service.description}
+      </p>
+
+      {/* Pricing & Details Section */}
+      <div className="mt-8">
+        <h2 className="text-3xl font-semibold text-gray-900">
+          Pricing & Details
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
           {Object.entries(service.price).map(([key, value]) => (
-            <div key={key} className="bg-gray-100 p-4 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold capitalize">
-                {key.replace("-", " ")} - ₹{value.cost}
+            <div
+              key={key}
+              className="bg-white p-6 rounded-xl shadow-lg border hover:shadow-2xl transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-gray-800 capitalize">
+                {key.replace("-", " ")} -{" "}
+                <span className="text-blue-500 font-bold">₹{value.cost}</span>
               </h3>
               <Link
                 to={`/service/${serviceId}/${key}`}
-                className="block bg-blue-500 text-white py-2 px-4 rounded-lg font-semibold mt-3 hover:bg-blue-700"
+                className="block bg-blue-600 text-white py-2 px-5 rounded-lg font-semibold mt-4 hover:bg-blue-700 transition duration-300"
               >
-                Book {key.charAt(0).toUpperCase() + key.slice(1)}
+                View Details
               </Link>
             </div>
           ))}
