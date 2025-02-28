@@ -81,14 +81,14 @@ export default function Home() {
           <div className="w-full h-full bg-yellow-500">
             {/* Appliance 1 - Mobile View */}
             <img
-              src="/WhatsApp Image 2025-02-28 at 11.35.00.jpeg"
+              src="/WhatsApp_Image_2025-02-28_at_11.35.00-removebg-preview.png"
               alt="Appliance 1"
               className="w-full h-full object-cover sm:hidden"
             />
 
             {/* Appliance 2 - Desktop View */}
             <img
-              src="/WhatsApp Image 2025-02-28 at 11.43.42.jpeg"
+              src="/WhatsApp_Image_2025-02-28_at_11.43.42-removebg-preview.png"
               alt="Appliance 2"
               className="w-full h-full object-cover hidden sm:block"
             />
@@ -96,8 +96,6 @@ export default function Home() {
         </div>
 
         {/* Horizontal Line */}
-        <div className="w-full pt-5 bg-yellow-500"></div>
-
         <div className="w-full mt-1"></div>
 
         {/* Bottom Section - Services */}
