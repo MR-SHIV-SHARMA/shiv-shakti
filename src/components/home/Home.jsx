@@ -81,14 +81,14 @@ export default function Home() {
           <div className="w-full h-full bg-yellow-500">
             {/* Appliance 1 - Mobile View */}
             <img
-              src="/public/WhatsApp Image 2025-02-28 at 11.35.00.jpeg"
+              src="/WhatsApp Image 2025-02-28 at 11.35.00.jpeg"
               alt="Appliance 1"
               className="w-full h-full object-cover sm:hidden"
             />
 
             {/* Appliance 2 - Desktop View */}
             <img
-              src="/public/WhatsApp Image 2025-02-28 at 11.43.42.jpeg"
+              src="/WhatsApp Image 2025-02-28 at 11.43.42.jpeg"
               alt="Appliance 2"
               className="w-full h-full object-cover hidden sm:block"
             />
