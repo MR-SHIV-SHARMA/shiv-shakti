@@ -12,6 +12,17 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const services = [
     {
+      id: "Electrician-visit-charge",
+      icon: (
+        <img
+          src="/electrician.png"
+          alt="electrician"
+          className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
+        />
+      ),
+      name: "Electrician visit charge",
+    },
+    {
       id: "air-conditioner",
       icon: (
         <TbAirConditioning className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
@@ -42,42 +53,66 @@ export default function Home() {
     {
       id: "microwave-oven",
       icon: (
-        <PiTelevisionBold className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+        <img
+          src="/microwave-oven.png"
+          alt="microwave-oven"
+          className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
+        />
       ),
       name: "Microwave Oven",
     },
     {
       id: "geyser",
       icon: (
-        <PiBathtub className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+        <img
+          src="/water-boiler.png"
+          alt="water-boiler"
+          className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
+        />
       ),
       name: "Geyser (Water Heater)",
     },
     {
       id: "ro",
       icon: (
-        <FaFaucet className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+        <img
+          src="/appliance.png"
+          alt="appliance"
+          className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
+        />
       ),
       name: "RO Water Purifier",
     },
     {
       id: "window-ac",
       icon: (
-        <TbAirConditioningDisabled className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+        <img
+          src="/window.png"
+          alt="window"
+          className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
+        />
       ),
       name: "Window AC",
     },
     {
       id: "modular-kitchen",
       icon: (
-        <MdKitchen className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+        <img
+          src="/kitchen-furniture.png"
+          alt="kitchen-furniture"
+          className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
+        />
       ),
       name: "Modular Kitchen",
     },
     {
       id: "chimney",
       icon: (
-        <MdSmokeFree className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+        <img
+          src="/chimney.png"
+          alt="Chimney"
+          className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
+        />
       ),
       name: "Chimney",
     },
@@ -90,12 +125,17 @@ export default function Home() {
         {/* Top Section - Logo and Business Name */}
         <div className="sm:absolute flex justify-between sm:justify-start sm:w-1/2 items-center sm:items-start px-4 bg-black">
           <div className="w-1/2 sm:w-auto flex justify-center px-4 mr-4">
-            <img
-              src="/logo.jpeg"
-              alt="Shiv Shakti Home Appliance Services"
-              className="w-24 sm:w-32 h-24 sm:h-32"
-            />
+            <div className="border-4 border-yellow-500 rounded-lg p-2">
+              <div className="bg-black rounded-lg p-4">
+                <img
+                  src="/logo.jpeg"
+                  alt="Shiv Shakti Home Appliance Services"
+                  className="w-24 sm:w-32 h-24 sm:h-32"
+                />
+              </div>
+            </div>
           </div>
+
           <div className="w-1/2 sm:w-auto text-left">
             <h1 className="text-2xl font-bold">
               Shiv Shakti Home Appliance Service's

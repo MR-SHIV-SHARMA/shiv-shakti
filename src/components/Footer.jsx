@@ -1,10 +1,16 @@
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        
         {/* Company Info */}
         <div>
           <h2 className="text-2xl font-bold">AC Repair Pro</h2>
@@ -44,18 +50,30 @@ export default function Footer() {
           </p>
           <p className="flex items-center justify-center md:justify-start">
             <Mail size={18} className="mr-2" />
-            <a href="mailto:info@acservice.com" className="text-blue-400 hover:underline">
+            <a
+              href="mailto:info@acservice.com"
+              className="text-blue-400 hover:underline"
+            >
               info@acservice.com
             </a>
           </p>
           <div className="flex justify-center md:justify-start space-x-4 mt-3">
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-blue-400 transition"
+            >
               <Facebook size={22} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-pink-400 transition">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-pink-400 transition"
+            >
               <Instagram size={22} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-blue-400 transition"
+            >
               <Twitter size={22} />
             </a>
           </div>

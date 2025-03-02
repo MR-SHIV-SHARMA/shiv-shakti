@@ -2,12 +2,43 @@ import { FaSnowflake, FaWrench, FaFan } from "react-icons/fa";
 
 // Dummy Service Data
 const services = [
-  { title: "AC Repair", description: "Quick and efficient AC repair services.", price: 50, icon: <FaWrench /> },
-  { title: "AC Installation", description: "Professional AC installation at your home or office.", price: 100, icon: <FaSnowflake /> },
-  { title: "AC Maintenance", description: "Regular maintenance to ensure top performance.", price: 80, icon: <FaFan /> },
-  { title: "Fridge Repair", description: "Fast fridge repair for all brands and models.", price: 60, icon: <FaWrench /> },
-  { title: "Washing Machine Repair", description: "Fixing issues with fully automatic & semi-automatic machines.", price: 70, icon: <FaWrench /> },
-  { title: "Geyser Service", description: "Water heater installation and repair services.", price: 90, icon: <FaFan /> },
+  {
+    title: "AC Repair",
+    description: "Quick and efficient AC repair services.",
+    price: 50,
+    icon: <FaWrench />,
+  },
+  {
+    title: "AC Installation",
+    description: "Professional AC installation at your home or office.",
+    price: 100,
+    icon: <FaSnowflake />,
+  },
+  {
+    title: "AC Maintenance",
+    description: "Regular maintenance to ensure top performance.",
+    price: 80,
+    icon: <FaFan />,
+  },
+  {
+    title: "Fridge Repair",
+    description: "Fast fridge repair for all brands and models.",
+    price: 60,
+    icon: <FaWrench />,
+  },
+  {
+    title: "Washing Machine Repair",
+    description:
+      "Fixing issues with fully automatic & semi-automatic machines.",
+    price: 70,
+    icon: <FaWrench />,
+  },
+  {
+    title: "Geyser Service",
+    description: "Water heater installation and repair services.",
+    price: 90,
+    icon: <FaFan />,
+  },
 ];
 
 // Service Card Component

@@ -7,6 +7,30 @@ import { GiChimney, GiWaterDrop } from "react-icons/gi";
 import { useParams, Link } from "react-router-dom";
 
 export const serviceDetails = {
+  "Electrician-visit-charge": {
+    title: "Electrician Visit and Charge Services",
+    description:
+      "Affordable electrician visit and charge services for homeowners.",
+    price: {
+      cost: {
+        cost: 199,
+        details: [
+          "A professional will visit your location for assessment.",
+          "Understanding your home and any potential issues.",
+          "Our technician will assess and recommend the best service options.",
+          "We will provide a quote based on your location and needs.",
+        ],
+      },
+    },
+    icon: (
+      <img
+        src="/electrician.png"
+        alt="electrician"
+        // size="40"
+        className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
+      />
+    ),
+  },
   "air-conditioner": {
     title: "Air Conditioner Services",
     description: "Expert AC repair and maintenance services to keep you cool.",
