@@ -36,12 +36,12 @@ const testimonials = [
 ];
 
 // Reusable animation variants
-const fadeIn = {
+export const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
-const stagger = {
+export const stagger = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
@@ -175,7 +175,7 @@ export default function WhyChooseUs() {
               <p className="text-xl">24/7 Immediate Response Team Available</p>
             </div>
             <a
-              href="tel:+911234567890"
+              href="tel:+916375477987"
               className="bg-white text-red-600 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3 hover:bg-gray-50 min-w-[250px] justify-center"
             >
               <FaPhoneAlt className="w-6 h-6" />
@@ -202,10 +202,10 @@ export default function WhyChooseUs() {
                 <div>
                   <p className="font-semibold">24/7 Support</p>
                   <a
-                    href="tel:+911234567890"
+                    href="tel:+916375477987"
                     className="text-lg sm:text-2xl font-bold hover:underline"
                   >
-                    +91 12345 67890
+                    +91 6375477987
                   </a>
                 </div>
               </div>
@@ -225,9 +225,7 @@ export default function WhyChooseUs() {
                 <FaMapMarkerAlt className="w-6 h-6 sm:w-8 sm:h-8 text-blue-200" />
                 <div>
                   <p className="font-semibold">Service Areas</p>
-                  <p className="text-lg sm:text-xl font-medium">
-                    Delhi NCR, Mumbai, Bangalore & Hyderabad
-                  </p>
+                  <p className="text-lg sm:text-xl font-medium">Jaipur</p>
                 </div>
               </div>
             </div>

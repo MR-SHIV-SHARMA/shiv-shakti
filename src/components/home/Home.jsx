@@ -2,12 +2,8 @@ import { FaTv } from "react-icons/fa";
 import { TbAirConditioning } from "react-icons/tb";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
 import { GiWashingMachine } from "react-icons/gi";
-import { PiTelevisionBold, PiBathtub } from "react-icons/pi";
-import { FaFaucet } from "react-icons/fa";
-import { TbAirConditioningDisabled } from "react-icons/tb";
-import { MdSmokeFree } from "react-icons/md";
-import { MdKitchen } from "react-icons/md";
 import { Link } from "react-router-dom";
+import WhyChooseUs from "./WhyChooseUs";
 
 export default function Home() {
   const services = [
@@ -20,7 +16,7 @@ export default function Home() {
           className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
         />
       ),
-      name: "Electrician visit charge",
+      name: "Electrician",
     },
     {
       id: "air-conditioner",
@@ -126,13 +122,13 @@ export default function Home() {
         <div className="sm:absolute flex justify-between sm:justify-start sm:w-1/2 items-center sm:items-start px-4 bg-black">
           <div className="w-1/2 sm:w-auto flex justify-center px-4 mr-4">
             <div className="border-4 border-yellow-500 rounded-lg p-2">
-              <div className="bg-black rounded-lg p-4">
-                <img
-                  src="/logo.jpeg"
-                  alt="Shiv Shakti Home Appliance Services"
-                  className="w-24 sm:w-32 h-24 sm:h-32"
-                />
-              </div>
+              {/* <div className="bg-black rounded-lg p-4"> */}
+              <img
+                src="/logo.jpeg"
+                alt="Shiv Shakti Home Appliance Services"
+                className="w-24 sm:w-32 h-24 sm:h-32"
+              />
+              {/* </div> */}
             </div>
           </div>
 
@@ -154,14 +150,14 @@ export default function Home() {
           <div className="w-full h-full bg-yellow-500">
             {/* Appliance 1 - Mobile View */}
             <img
-              src="/WhatsApp_Image_2025-02-28_at_11.35.00-removebg-preview.png"
+              src="/b.png"
               alt="Appliance 1"
-              className="w-full h-full object-cover sm:hidden"
+              className="w-[80%] h-full sm:hidden ml-auto"
             />
 
             {/* Appliance 2 - Desktop View */}
             <img
-              src="/WhatsApp_Image_2025-02-28_at_11.43.42-removebg-preview.png"
+              src="/1.png"
               alt="Appliance 2"
               className="w-full h-full object-cover hidden sm:block"
             />
@@ -186,6 +182,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* WhyChooseUs Section */}
+      <WhyChooseUs />
     </div>
   );
 }
