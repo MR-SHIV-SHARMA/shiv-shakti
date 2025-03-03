@@ -2,20 +2,12 @@ import { motion } from "framer-motion";
 import {
   FaCheckCircle,
   FaTools,
-  FaFan,
   FaRegSnowflake,
-  FaTv,
   FaStar,
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaEnvelope,
 } from "react-icons/fa";
-import { TbAirConditioning } from "react-icons/tb";
-import { CgSmartHomeRefrigerator } from "react-icons/cg";
-
-import { GiWashingMachine } from "react-icons/gi";
-import { BiFridge } from "react-icons/bi";
-import { MdOutlineAcUnit, MdKitchen } from "react-icons/md";
 
 const testimonials = [
   {
@@ -125,7 +117,7 @@ export default function WhyChooseUs() {
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-blue-600 text-white p-4 rounded-xl">
                   <FaStar className="w-8 h-8" />
                 </div>
-                <div className="flex mb-4">
+                <div className="flex my-4">
                   {[...Array(5)].map((_, i) => (
                     <FaStar
                       key={i}
