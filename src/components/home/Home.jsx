@@ -8,29 +8,11 @@ import WhyChooseUs from "./WhyChooseUs";
 export default function Home() {
   const services = [
     {
-      id: "Electrician-visit-charge",
-      icon: (
-        <img
-          src="/electrician.png"
-          alt="electrician"
-          className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
-        />
-      ),
-      name: "Electrician",
-    },
-    {
       id: "air-conditioner",
       icon: (
         <TbAirConditioning className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
       ),
       name: "Air Conditioner",
-    },
-    {
-      id: "washing-machine",
-      icon: (
-        <GiWashingMachine className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
-      ),
-      name: "Washing Machine",
     },
     {
       id: "refrigerator",
@@ -40,11 +22,11 @@ export default function Home() {
       name: "Refrigerator",
     },
     {
-      id: "tv",
+      id: "washing-machine",
       icon: (
-        <FaTv className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+        <GiWashingMachine className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
       ),
-      name: "TV & Appliances",
+      name: "Washing Machine",
     },
     {
       id: "microwave-oven",
@@ -80,6 +62,17 @@ export default function Home() {
       name: "RO Water Purifier",
     },
     {
+      id: "chimney",
+      icon: (
+        <img
+          src="/chimney.png"
+          alt="Chimney"
+          className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
+        />
+      ),
+      name: "Chimney",
+    },
+    {
       id: "window-ac",
       icon: (
         <img
@@ -89,6 +82,13 @@ export default function Home() {
         />
       ),
       name: "Window AC",
+    },
+    {
+      id: "tv",
+      icon: (
+        <FaTv className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4 text-black" />
+      ),
+      name: "TV & Appliances",
     },
     {
       id: "modular-kitchen",
@@ -102,15 +102,15 @@ export default function Home() {
       name: "Modular Kitchen",
     },
     {
-      id: "chimney",
+      id: "Electrician-visit-charge",
       icon: (
         <img
-          src="/chimney.png"
-          alt="Chimney"
+          src="/electrician.png"
+          alt="electrician"
           className="w-16 sm:w-32 h-16 sm:h-32 mx-auto mt-4"
         />
       ),
-      name: "Chimney",
+      name: "Electrician",
     },
   ];
 

@@ -105,8 +105,8 @@ export const serviceDetails = {
     title: "Refrigerator Repair",
     description: "We fix all types of refrigerators with guaranteed service.",
     price: {
-      installation: {
-        cost: 499,
+      "Gas refilling": {
+        cost: 2200,
         details: [
           "Positioning and leveling of the refrigerator.",
           "Checking power supply and compressor function.",
