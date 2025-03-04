@@ -1,21 +1,6 @@
 import { motion } from "framer-motion";
-import {
-  FaCheckCircle,
-  FaTools,
-  FaFan,
-  FaRegSnowflake,
-  FaTv,
-  FaStar,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaEnvelope,
-} from "react-icons/fa";
-import { TbAirConditioning } from "react-icons/tb";
-import { CgSmartHomeRefrigerator } from "react-icons/cg";
-
+import { FaFan, FaRegSnowflake, FaTv } from "react-icons/fa";
 import { GiWashingMachine } from "react-icons/gi";
-import { BiFridge } from "react-icons/bi";
-import { MdOutlineAcUnit, MdKitchen } from "react-icons/md";
 
 const services = [
   {

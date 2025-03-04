@@ -1,13 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import Home from "./components/home/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ReviewCard from "./components/ReviewCard";
-import Contact from "./components/Contact";
 import ServiceCard from "./components/ServiceCard";
-import Booking from "./components/Booking";
 import ServiceDetail from "./components/serviceDetails";
 import ServiceTypeDetail from "./components/ServiceTypeDetail";
 
@@ -69,14 +71,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServiceCard />} />
-          <Route path="/book" element={<Booking />} />
-          <Route path="/reviews" element={<ReviewCard />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/service/:serviceId" element={<ServiceDetail />} />
           <Route
             path="/service/:serviceId/:serviceType"
             element={<ServiceTypeDetail />}
           />
+          <Route path="*" element={<Navigate to="/" />} />{" "}
         </Routes>
 
         {/* Phone Icon - Left Side */}
