@@ -1,5 +1,6 @@
 import { FaSnowflake, FaWrench, FaFan } from "react-icons/fa";
-
+import { GiChimney, GiWaterDrop } from "react-icons/gi";
+import { MdOutlineAcUnit } from "react-icons/md";
 // Dummy Service Data
 const services = [
   {
@@ -27,6 +28,18 @@ const services = [
     icon: <FaWrench />,
   },
   {
+    title: "Fridge Installation",
+    description: "Professional fridge installation services.",
+    price: 120,
+    icon: <FaSnowflake />,
+  },
+  {
+    title: "Fridge Maintenance",
+    description: "Regular maintenance to keep your fridge running efficiently.",
+    price: 90,
+    icon: <FaFan />,
+  },
+  {
     title: "Washing Machine Repair",
     description:
       "Fixing issues with fully automatic & semi-automatic machines.",
@@ -34,10 +47,88 @@ const services = [
     icon: <FaWrench />,
   },
   {
-    title: "Geyser Service",
-    description: "Water heater installation and repair services.",
-    price: 90,
+    title: "Washing Machine Installation",
+    description: "Expert installation of washing machines.",
+    price: 150,
+    icon: <FaSnowflake />,
+  },
+  {
+    title: "Washing Machine Maintenance",
+    description: "Routine servicing to enhance washing machine performance.",
+    price: 100,
     icon: <FaFan />,
+  },
+  {
+    title: "Geyser Repair",
+    description: "Water heater repair services to ensure hot water supply.",
+    price: 199,
+    icon: <FaWrench />,
+  },
+  {
+    title: "Geyser Installation",
+    description: "Safe and professional geyser installation services.",
+    price: 399,
+    icon: <FaSnowflake />,
+  },
+  {
+    title: "Geyser Maintenance",
+    description: "Regular servicing to extend geyser lifespan.",
+    price: 499,
+    icon: <FaFan />,
+  },
+  {
+    title: "Chimney Repair",
+    description: "Expert repair of all types of kitchen chimneys.",
+    price: 199,
+    icon: <GiChimney size="40" />,
+  },
+  {
+    title: "Chimney Installation",
+    description: "Installation of kitchen chimneys for a smoke-free kitchen.",
+    price: 499,
+    icon: <GiChimney size="40" />,
+  },
+  {
+    title: "Chimney Maintenance",
+    description: "Thorough cleaning and servicing for efficient performance.",
+    price: 1200,
+    icon: <GiChimney size="40" />,
+  },
+  {
+    title: "RO Water Purifier Repair",
+    description: "Repair services for all types of RO water purifiers.",
+    price: 199,
+    icon: <GiWaterDrop size="40" />,
+  },
+  {
+    title: "RO Water Purifier Installation",
+    description: "Professional installation of RO water purifiers.",
+    price: 499,
+    icon: <GiWaterDrop size="40" />,
+  },
+  {
+    title: "RO Water Purifier Maintenance",
+    description: "Routine service to ensure clean and safe drinking water.",
+    price: 399,
+    icon: <GiWaterDrop size="40" />,
+  },
+  {
+    title: "Window AC Repair",
+    description: "Repair services for all brands of window AC units.",
+    price: 199,
+    icon: <MdOutlineAcUnit size="40" />,
+  },
+  {
+    title: "Window AC Installation",
+    description: "Professional installation of window AC units.",
+    price: 499,
+    icon: <MdOutlineAcUnit size="40" />,
+  },
+  {
+    title: "Window AC Maintenance",
+    description: "Regular servicing for efficient cooling performance.",
+    price: 499,
+    icon: <MdOutlineAcUnit size="40" />,
   },
 ];
 

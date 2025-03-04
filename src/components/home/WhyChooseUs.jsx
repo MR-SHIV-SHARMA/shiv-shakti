@@ -8,6 +8,7 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const testimonials = [
   {
@@ -27,7 +28,6 @@ const testimonials = [
   },
 ];
 
-// Reusable animation variants
 export const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
@@ -37,7 +37,6 @@ export const stagger = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-// Reusable components
 const SectionHeader = ({ title, subtitle }) => (
   <motion.div
     initial="hidden"
@@ -56,31 +55,71 @@ const SectionHeader = ({ title, subtitle }) => (
 export default function WhyChooseUs() {
   return (
     <div className="overflow-hidden">
-      {/* Why Choose Us */}
+      <Helmet>
+        <title>Best AC Repair & Service in Jaipur | 24/7 Support</title>
+        <meta
+          name="description"
+          content="Get professional and affordable AC repair services in Jaipur. Certified experts, same-day service, and 24/7 support available. Call now!"
+        />
+        <meta
+          property="og:title"
+          content="Best AC Repair & Service in Jaipur"
+        />
+        <meta
+          property="og:description"
+          content="Professional and affordable AC repair service in Jaipur. Contact us for a same-day fix!"
+        />
+        <meta property="og:image" content="your-image-url.jpg" />
+        <meta property="og:url" content="your-website-url" />
+      </Helmet>
+
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <SectionHeader title="Why Choose Us?" />
+          <SectionHeader
+            title="Why Choose Us?"
+            subtitle="Best AC Repair & Service in Jaipur"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 title: "Certified Experts",
                 text: "Our technicians are certified and background-checked",
-                icon: <FaTools className="w-12 h-12 text-blue-600" />,
+                icon: (
+                  <FaTools
+                    className="w-12 h-12 text-blue-600"
+                    aria-label="Certified Experts"
+                  />
+                ),
               },
               {
                 title: "Same-Day Service",
                 text: "Emergency services available 24/7",
-                icon: <FaCheckCircle className="w-12 h-12 text-blue-600" />,
+                icon: (
+                  <FaCheckCircle
+                    className="w-12 h-12 text-blue-600"
+                    aria-label="Same-Day Service"
+                  />
+                ),
               },
               {
                 title: "Price Guarantee",
                 text: "Upfront pricing with no hidden fees",
-                icon: <FaStar className="w-12 h-12 text-blue-600" />,
+                icon: (
+                  <FaStar
+                    className="w-12 h-12 text-blue-600"
+                    aria-label="Price Guarantee"
+                  />
+                ),
               },
               {
                 title: "Warranty",
                 text: "90-day warranty on all repairs",
-                icon: <FaRegSnowflake className="w-12 h-12 text-blue-600" />,
+                icon: (
+                  <FaRegSnowflake
+                    className="w-12 h-12 text-blue-600"
+                    aria-label="Warranty"
+                  />
+                ),
               },
             ].map((item, index) => (
               <motion.div
